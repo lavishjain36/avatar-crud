@@ -4,22 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Css Border</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <section class="container">
-      <input type="text" class="add-user-name" placeholder="Enter UserName" />
-      <input
-        type="text"
-        class="add-user-avatar"
-        placeholder="Enter Avatar url"
-      />
-      <button onclick="addUser()">Add User</button>
-    </section>
+    <!-- Border-Top -->
+    <div style="border-top: 5px solid red">
+      <h2>Border Top</h2>
+    </div>
 
-    <!-- //TO collect all your all data create  -->
-    <div class="user-list"></div>
-    <script src="script.js"></script>
+    <!-- Border-Right -->
+    <div style="border-right: 5px solid rgb(55, 22, 175)">
+      <h2>Border Right</h2>
+    </div>
+
+    <!-- Border-Bottom -->
+    <div style="border-bottom: 5px solid rgb(51, 17, 116)">
+      <h2>Border Bottom</h2>
+    </div>
+
+    <!-- Border-Left -->
+    <div style="border-left: 5px solid green">
+      <h2>Border Left</h2>
+    </div>
+
+    <!-- Border-All -->
+    <div id="rounded-all">
+      <h2>Border All</h2>
+    </div>
+
+    <!-- Border-Two sides -->
+    <div id="rounded-two">
+      <h2>Round Two</h2>
+    </div>
+
+    <!-- Customized Border -->
+    <div id="custom-border">
+      <h2>Customized Border</h2>
+    </div>
   </body>
 </html>
