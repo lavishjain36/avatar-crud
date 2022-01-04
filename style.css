@@ -1,26 +1,11 @@
 div {
-  background-color: rgb(42, 241, 215);
+  background-color: #ec31ec;
+  width: 500px;
+  padding: 10px;
+  margin: 20px;
   text-align: center;
-  padding: 12px;
-  margin: 12px;
-  width: 450px;
 }
 
-#rounded-all {
-  border: 10px solid red;
-  border-radius: 50px;
-}
-
-#rounded-two {
-  border: 5px solid rgb(184, 29, 29);
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-#custom-border {
-  border-top: 5px solid rgb(19, 22, 165);
-  border-right: 5px solid rgb(165, 19, 128);
-  border-bottom: 5px solid rgb(165, 19, 19);
-  border-left: 5px solid rgb(19, 165, 19);
-  box-shadow: 5px 5px 5px rgb(100, 255, 39);
+p {
+  border: 5px solid black;
 }
