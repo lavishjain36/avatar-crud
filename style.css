@@ -1,61 +1,55 @@
-body {
+p {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 26px;
+  font-weight: 300;
 }
 
-img {
-  width: 100%;
+div {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: rgb(9, 48, 223);
+  background-size: cover;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 3px solid red;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0px 10px 10px rgba(125, 255, 4, 0.897);
+  border-radius: 20px;
 }
 
-/* Small Devices */
-@media (max-width: 500px) {
-  body {
-    background: linear-gradient(45deg, #f32373, #21eb21);
-  }
-  h1:nth-child(1) {
-    display: block;
-  }
+.static {
+  position: static;
+  top: 400px;
 }
 
-/* Mobile Devices */
-@media (min-width: 501px) and (max-width: 630px) {
-  body {
-    background: linear-gradient(45deg, #f0c7d7, #eb2121);
-  }
-  h1:nth-child(2) {
-    display: block;
-  }
+.relative {
+  position: relative;
+  left: 400px;
+  /* top: 500px; */
 }
 
-/* Tablet Devices */
-@media (min-width: 631px) and (max-width: 700px) {
-  body {
-    background: linear-gradient(45deg, #ff3ace, #0b739c);
-  }
-  h1:nth-child(3) {
-    display: block;
-  }
+.ancestor {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  left: 400px;
+  /* top: 200px; */
 }
 
-/* Laptop Devices */
-@media (min-width: 801px) and (max-width: 1000px) {
-  body {
-    background: linear-gradient(45deg, #10ffc3, #3bf816);
-  }
-  h1:nth-child(4) {
-    display: block;
-  }
+.absolute {
+  position: absolute;
+  left: 500px;
+  top: 300px;
 }
 
-/* Large Devices */
+.fixed {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+}
 
-/* 1000 and 1365px */
-
-@media (min-width: 1001px) {
-  body {
-    background: linear-gradient(45deg, #f38ec9, #f57d91);
-  }
-  h1:nth-child(5) {
-    display: block;
-  }
+.sticky {
+  width: 50%;
+  top: 20px;
+  position: sticky;
 }
