@@ -4,26 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Css Flex Box Layout</title>
+    <title>Media Queries</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
-    <section id="container">
-      <article class="item1"><h2>Item-1</h2></article>
-      <article class="item2"><h2>Item-2</h2></article>
-      <article class="item3"><h2>Item-3</h2></article>
-      <article class="item4"><h2>Item-4</h2></article>
-      <article class="item5"><h2>Item-5</h2></article>
-      <article class="item6"><h2>Item-6</h2></article>
-      <article class="item7"><h2>Item-7</h2></article>
-      <article class="item8"><h2>Item-8</h2></article>
-    </section>
+    <h2>Screen Size: <span id="span"></span>px</h2>
+    <div>
+      <h1>Small Mobile Devices</h1>
+      <h1>Mobile Devices</h1>
+      <h1>Tablet Devices</h1>
+      <h1>Laptop Devices</h1>
+      <h1>X-Large Devices</h1>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+      alt="image"
+    />
 
-    <nav>
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
-    </nav>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+      alias, tempora pariatur unde blanditiis amet est ut iure veritatis id
+      dolorem praesentium odio architecto minus sunt a facilis placeat
+      accusantium! Impedit a dicta, maxime asperiores, illo non dolorem ullam
+      saepe eaque obcaecati dignissimos sunt velit excepturi voluptatibus vitae
+      fuga laudantium labore necessitatibus nulla commodi magni pariatur
+      consequuntur ex! Laudantium, eum. Dignissimos, at. Fugit, qui. Dolorum
+      dolores, iusto quae inventore enim aliquid quis, quam magnam culpa
+      distinctio veritatis. Suscipit, possimus quas eos neque est voluptate
+      dicta rem ratione cumque qui error. Explicabo labore temporibus nobis
+      nulla officiis pariatur, quaerat delectus atque tempora aspernatur nihil
+      ab hic ex qui necessitatibus rem voluptas fuga quae molestiae consequatur
+      expedita cum porro. Dicta, maiores eveniet! Mollitia, ab delectus,
+      temporibus quos voluptatem doloremque, voluptatibus adipisci neque vero at
+      sit explicabo obcaecati accusantium distinctio quam nesciunt in. Ut minus
+      excepturi nulla exercitationem modi tempora eius dolorem esse.
+    </p>
+
+    <script>
+      window.addEventListener("resize", function () {
+        let screensize = window.innerWidth;
+        document.querySelector("#span").textContent = screensize;
+      });
+    </script>
   </body>
 </html>
