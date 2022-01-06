@@ -4,117 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
+    <title>Nested Table</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- creation of table,tr,td,th -->
-    <table border="1" cellspacing="1" cellpadding="2">
+    <table class="statistics" border="1">
       <tr>
-        <td width="50"><strong>Sr.</strong></td>
-        <td width="100"><strong>Name</strong></td>
-        <td width="150"><strong>Email</strong></td>
-        <td width="100"><strong>Address</strong></td>
-        <td width="200"><strong>Phone</strong></td>
+        <td colspan="3">Data</td>
+        <td colspan="3">2022-January<i>Can be Daily,Weekly,Monthly</i></td>
       </tr>
 
       <tr>
-        <td>1</td>
-        <td>Lavish</td>
-        <td>l@gmail.com</td>
-        <td>Chennai</td>
-        <td>9888888888</td>
+        <td rowspan="3">Summary</td>
+        <td>Total Turnover:</td>
+        <td>$1,000,000</td>
       </tr>
 
       <tr>
-        <td>2</td>
-        <td>Swapnil</td>
-        <td>s@gmail.com</td>
-        <td>Bangalore</td>
-        <td>9777777777</td>
+        <td>Total win/loss</td>
+        <td>$1,000,000</td>
       </tr>
 
       <tr>
-        <td>3</td>
-        <td>Sachin</td>
-        <td>Sachin@gmail.com</td>
-        <td>Mumbai</td>
-        <td>9666666666</td>
+        <td>Total Profit/Loss</td>
+        <td>$1,000,000</td>
       </tr>
 
       <tr>
-        <td>4</td>
-        <td>Rahul</td>
-        <td>Rahul@gmail.com</td>
-        <td>Delhi</td>
-        <td>9555555555</td>
+        <td colspan="2">First time Deposit</td>
+        <td>1,000</td>
+      </tr>
+      <tr>
+        <td colspan="2">Conversion Rate</td>
+      </tr>
+      <!-- Unique player -->
+      <tr>
+        <td rowspan="2">Unique Active Players</td>
+        <td colspan="2">MicroGames</td>
       </tr>
 
       <tr>
-        <td>5</td>
-        <td>Virat</td>
-        <td>virat@gmail.com</td>
-        <td>Pune</td>
-        <td>9444444444</td>
+        <td colspan="2">Asia games</td>
       </tr>
-    </table>
 
-    <!-- Html Semantic table element -->
-    <!-- thead,tbody,tfoot -->
+      <!-- /product Details -->
+      <tr>
+        <td rowspan="3">Products</td>
+        <td rowspan="4">OneWorks</td>
+        <td>Handles</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>WIn/Loss</td>
+        <td>$1,000,000</td>
+      </tr>
 
-    <table border="2">
-      <thead>
-        <tr>
-          <td width="50"><strong>Sr.</strong></td>
-          <td width="100"><strong>Name</strong></td>
-          <td width="150"><strong>Email</strong></td>
-          <td width="100"><strong>Address</strong></td>
-          <td width="200"><strong>Phone</strong></td>
-        </tr>
-      </thead>
+      <tr>
+        <td>Profit/Loss</td>
+        <td>$1,000,000</td>
+      </tr>
 
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Lavish</td>
-          <td>l@gmail.com</td>
-          <td>Chennai</td>
-          <td>9888888888</td>
-        </tr>
+      <!-- //Financial Information -->
+      <tr>
+        <td rowspan="5">Financial Information</td>
+        <td rowspan="5">Deposit</td>
+      </tr>
 
-        <tr>
-          <td>2</td>
-          <td>Swapnil</td>
-          <td>s@gmail.com</td>
-          <td>Bangalore</td>
-          <td>9777777777</td>
-        </tr>
+      <tr>
+        <td>Reload Deposit</td>
+        <td>30</td>
+      </tr>
 
-        <tr>
-          <td>3</td>
-          <td>Sachin</td>
-          <td>Sachin@gmail.com</td>
-          <td>Mumbai</td>
-          <td>9666666666</td>
-        </tr>
+      <tr>
+        <td>Withdrawal</td>
+        <td>30</td>
+      </tr>
 
-        <tr>
-          <td>4</td>
-          <td>Rahul</td>
-          <td>Rahul@gmail.com</td>
-          <td>Delhi</td>
-          <td>9555555555</td>
-        </tr>
+      <tr>
+        <td>Net Deposit</td>
+        <td>30</td>
+      </tr>
 
-        <tr>
-          <td>5</td>
-          <td>Virat</td>
-          <td>virat@gmail.com</td>
-          <td>Pune</td>
-          <td>9444444444</td>
-        </tr>
-      </tbody>
+      <tr>
+        <td>Net Reload</td>
+        <td>30</td>
+      </tr>
+
+      <!-- //Deposit Information -->
+      <tr>
+        <td rowspan="5">Deposit Information</td>
+        <td rowspan="5">Deposit</td>
+      </tr>
+
+      <tr>
+        <td>Reload Deposit</td>
+        <td>30</td>
+      </tr>
     </table>
   </body>
 </html>
