@@ -4,25 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Structure of html</title>
+    <title>Structure of Html using Semantic element</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Structure with Div</h1>
-    <!-- use div with class and id to create a layout  -->
-    <div class="container" id="container">
+    <main class="container" id="container">
       Container
-      <div class="header" id="header">Header</div>
 
-      <div class="middle" id="middle">
+      <header class="header" id="header">Header</header>
+      <nav class="nav" id="nav">Navigation</nav>
+
+      <section class="section" id="section">
         Middle
         <br />
-        <div class="left" id="left">Left</div>
-        <div class="right" id="right">Right</div>
+        <aside class="left" id="left">Left</aside>
+        <aside class="right" id="right">Right</aside>
+      </section>
 
-        <div class="footer" id="footer">Footer</div>
-      </div>
-    </div>
+      <footer class="footer" id="foo">Footer</footer>
+    </main>
   </body>
 </html>
