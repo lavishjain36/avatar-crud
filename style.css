@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+/* Divide 3 columns into equal widths */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+}
+
+.price {
+  list-style-type: none;
+  border: 2px solid black;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 16px 0 rgb(241, 76, 76);
+  cursor: pointer;
+}
+
+.price .header {
+  background-color: #4caf50;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.price li {
+  border-bottom: 5px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: rgb(37, 226, 195);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media only screen and (max-width: 668px) {
+  .columns {
+    width: 100%;
+  }
+}
