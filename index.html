@@ -5,12 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
     <script src="script.js"></script>
   </head>
   <body>
-    <!-- Internal Javascript -->
-    <!-- <script>
-      console.log("Hello guvi");
-    </script> -->
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Calculator</div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="">First Value</label>
+            <input type="text" id="first" class="form-control" />
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="">Second Value</label>
+            <input type="text" id="second" class="form-control" />
+          </div>
+        </div>
+        <button onclick="add()" class="btn btn-primary">Add</button>
+        <button onclick="sub()" class="btn btn-primary">Subtract</button>
+        <button onclick="mul()" class="btn btn-primary">Multiply</button>
+        <button onclick="div()" class="btn btn-primary">Divide</button>
+      </div>
+
+      <p class="output"></p>
+    </div>
   </body>
 </html>

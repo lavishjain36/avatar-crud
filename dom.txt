@@ -1,0 +1,23 @@
+Date:10/1/2022
+DOM Manipulation(Document Object Model)
+What is DOM?
+What is a node?
+document and window
+Javascript dom selectors
+id,name,class,element 
+1.getElementById, 
+2.getElementByclassname
+3.getElementByTagName
+4.querySelector vs querySelectorAll
+To Display the text infor
+innerHTML vs innerText
+
+createElement->li,p,h1,input-
+setAttribute->
+appendChild vs append
+
+
+
+
+
+
