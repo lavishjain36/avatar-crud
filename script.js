@@ -1,39 +1,22 @@
-function add() {
-  var num1 = document.getElementById("first").value;
-  var num2 = document.getElementById("second").value;
-  var result = parseInt(num1) + parseInt(num2);
-  console.log(result);
+// Generate a random number
+let y = Math.floor(Math.random() * 10 + 1);
+console.log(y);
 
-  document.getElementsByClassName("output")[0].innerHTML =
-    "Addition is " + result;
-}
+var guess = 1;
+document.getElementById("submitguess").onclick = function () {
+  //Select the input element Number
+  let x = document.getElementById("GuessField").value;
+  // console.log(x);
 
-function sub() {
-  var num1 = document.getElementById("first").value;
-  var num2 = document.getElementById("second").value;
-  var result = parseInt(num1) - parseInt(num2);
-  console.log(result);
-
-  document.getElementsByClassName("output")[0].innerHTML =
-    "Subtraction is " + result;
-}
-
-function mul() {
-  var num1 = document.getElementById("first").value;
-  var num2 = document.getElementById("second").value;
-  var result = parseInt(num1) * parseInt(num2);
-  console.log(result);
-
-  document.getElementsByClassName("output")[0].innerText =
-    "Multiplication is " + result;
-}
-
-function div() {
-  var num1 = document.getElementById("first").value;
-  var num2 = document.getElementById("second").value;
-  var result = parseInt(num1) / parseInt(num2);
-  console.log(result);
-
-  document.getElementsByClassName("output")[0].innerText =
-    "Division is " + result;
-}
+  if (x == y) {
+    alert(
+      "Congratulation.You guessed it right Number in " + guess + " guesses"
+    );
+  } else if (x > y) {
+    guess++;
+    alert("Sorry! Enter a smaller number");
+  } else {
+    guess++;
+    alert("Sorry! Enter a larger number");
+  }
+};
