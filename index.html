@@ -4,28 +4,162 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the number</title>
+    <title></title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Moon+Dance&family=Open+Sans:ital,wght@1,500&family=Oswald:wght@600&family=Poppins:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Guess The Number</h1>
-      <p>Guess a number between 1 and 10</p>
-      <label for="">Enter a Number:</label>
-      <input type="text" id="GuessField" class="GuessField" />
-      <input
-        type="submit"
-        value="Submit"
-        id="submitguess"
-        class="submitguess"
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img
+        src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png"
+        width="100"
+        height="100"
+        alt="avatar"
       />
-    </div>
-    <script src="script.js"></script>
+      <a href="#about-section">About</a>
+      <a href="#exp-section">Experience</a>
+      <a href="#edu-section">Education</a>
+      <a href="#skills-section">Skills</a>
+      <a href="#interest">Interest</a>
+      <a href="#cert-section">Certification</a>
+    </aside>
+
+    <section id="about-section">
+      <h1>
+        <span id="fname">John</span>
+        <span id="lname">Doe</span>
+      </h1>
+      <h2>Adress:Los Angeles, CA</h2>
+      <h2>Phone: +1 (123) 456-7890</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+        consequuntur laboriosam incidunt porro. Ut, ratione, reprehenderit
+        exercitationem quod perferendis quo repellat nulla reiciendis
+        consectetur enim molestiae sed ipsam iste assumenda!
+      </p>
+    </section>
+
+    <!-- //experience -->
+    <section id="exp-section">
+      <h2 class="main-heading">My Experience</h2>
+      <article class="exp-article">
+        <h2>Web Developer</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          voluptatum totam consequuntur dicta, soluta, harum eaque minus quis
+          doloremque suscipit excepturi possimus magni quod et similique, eius
+          fuga eligendi! Cupiditate!
+        </p>
+        <button class="exp-article-button">Read more</button>
+      </article>
+
+      <article class="exp-article">
+        <h2>FullStack Dev</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          voluptatum totam consequuntur dicta, soluta, harum eaque minus quis
+          doloremque suscipit excepturi possimus magni quod et similique, eius
+          fuga eligendi! Cupiditate!
+        </p>
+        <button class="exp-article-button">Read more</button>
+      </article>
+
+      <article class="exp-article">
+        <h2>Senior Developer</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          voluptatum totam consequuntur dicta, soluta, harum eaque minus quis
+          doloremque suscipit excepturi possimus magni quod et similique, eius
+          fuga eligendi! Cupiditate!
+        </p>
+        <button class="exp-article-button">Read more</button>
+      </article>
+    </section>
+
+    <!-- //education -->
+    <section id="edu-section">
+      <h2 class="main-heading">My Education</h2>
+      <article class="edu-article">
+        <h2>School</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+          perferendis officiis ut quaerat tempora beatae, quibusdam consequatur!
+          Rem molestiae tempore nobis nisi tempora autem dignissimos in saepe,
+          ex dolores impedit!
+        </p>
+      </article>
+      <article class="edu-article">
+        <h2>University</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+          perferendis officiis ut quaerat tempora beatae, quibusdam consequatur!
+          Rem molestiae tempore nobis nisi tempora autem dignissimos in saepe,
+          ex dolores impedit!
+        </p>
+      </article>
+    </section>
+    <!-- Skills -->
+    <section id="skills-section">
+      <h2 class="main-heading">My Skills</h2>
+
+      <article class="skills-article">
+        <h2>Ui Development</h2>
+        <div>
+          <i class="fab fa-html5 fa-4x"></i>
+          <i class="fab fa-css3-alt fa-4x"></i>
+          <i class="fab fa-react fa-4x"></i>
+          <i class="fab fa-angular fa-4x"></i>
+          <i class="fab fa-node-js fa-4x"></i>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis
+          illo, maiores officia magni in vero doloremque nihil explicabo tenetur
+          quo ratione reprehenderit odio suscipit, voluptatum sit beatae
+          necessitatibus perferendis.
+        </p>
+      </article>
+
+      <article class="skills-article">
+        <h2>Mern Stack</h2>
+        <div>
+          <i class="fab fa-node-js fa-4x"></i>
+          <i class="fab fa-react fa-4x"></i>
+          <i class="fab fa-angular fa-4x"></i>
+          <i class="fab fa-js-square fa-4x"></i>
+          <i class="fab fa-html5 fa-4x"></i>
+        </div>
+      </article>
+
+      <article class="skills-article">
+        <h2>Cloud Aws</h2>
+      </article>
+    </section>
   </body>
 </html>

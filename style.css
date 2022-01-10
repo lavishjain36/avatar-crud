@@ -1,0 +1,117 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #a6b4f5;
+}
+.sidebar {
+  background-color: #2fff14;
+  float: left;
+  width: 300px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 5px 5px 15px rgb(255, 0, 149);
+}
+
+.sidebar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid rgb(255, 72, 27);
+  box-shadow: 10px 5px 15px rgb(59, 175, 160);
+  margin-top: 100px;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: rgb(110, 78, 153);
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background: #1a4bec;
+  color: rgb(255, 72, 27);
+}
+
+#about-section,
+#skills-section,
+#education-section,
+#experience-section,
+#projects-section,
+#contact-section {
+  margin-left: 300px;
+  padding: 20px;
+}
+
+#about-section h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#fname {
+  color: rgb(73, 77, 17);
+  text-shadow: rgb(115, 247, 89) 0px 0px 10px;
+}
+#lname {
+  color: rgb(73, 77, 17);
+  text-shadow: rgb(247, 89, 110) 0px 0px 10px;
+}
+#about-section p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 120px;
+}
+
+#exp-section {
+  margin-left: 300px;
+  padding: 20px;
+}
+
+.main-heading {
+  margin-top: 0;
+  font-family: "san-serif";
+  font-size: 40px;
+  text-shadow: rgba(255, 5, 122, 0.945) 10px 0px 10px;
+}
+
+.exp-article {
+  width: 250px;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 10px 5px 10px rgb(255, 24, 120);
+  border-radius: 20px;
+  transition: all 0.8s ease;
+}
+
+.exp-article:hover {
+  transform: perspective(500px) rotateY(-40deg);
+}
+
+.exp-article-button {
+  background-color: #6d25f1;
+  border: none;
+  color: rgb(51, 32, 32);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.8s ease;
+}
