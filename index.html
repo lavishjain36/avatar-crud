@@ -4,51 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee Data Using DOM</title>
+    <title>DOM EVENTS</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- //create 3 Button  -->
-    <section class="container-fluid mt-3">
-      <button class="btn btn-primary" id="all-emp-btn">All Employee</button>
-      <button class="btn btn-primary" id="male-emp-btn">Male Employee</button>
-      <button class="btn btn-primary" id="female-emp-btn">
-        Female Employee
-      </button>
-
-      <br />
-      <br />
-      <!-- //create a input for Search Functionality  -->
+    <section class="sms-app">
       <form action="">
-        <label for="">Type Employee Name</label>
-        <input
-          type="search"
-          placeholder="Search Here"
-          class="inputField"
-          id="search-box"
-        />
+        <h1>SMS App</h1>
+        <textarea
+          name=""
+          id="text-area"
+          cols="50"
+          rows="10"
+          maxlength="100"
+          placeholder="Type your message here"
+          onkeyup="smstypfun()"
+        ></textarea>
       </form>
+      <h1>Remaining Characters:<span id="chars">100</span></h1>
+    </section>
 
-      <!-- //create a layout for Table Data for Displaying the dat -->
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>IP Address</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
+    <!-- Change Password Pass -->
+    <section class="change-password">
+      <h1>Change Password</h1>
+      <form action="">
+        <input type="password" placeholder="password here" id="pass-box" />
+        <input type="checkbox" id="check" onchange="changePassword()" />Show me
+        Password
+      </form>
+    </section>
+
+    <!-- Likes and disklies -->
+    <section class="likes-app">
+      <h1>Likes App</h1>
+      <div class="buttons-section">
+        <div>
+          <button onclick="liked()">
+            <i class="fas fa-thumbs-up"></i>
+          </button>
+          <h2 id="likes">0</h2>
+        </div>
+
+        <div>
+          <button onclick="disliked()">
+            <i class="fas fa-heart"></i>
+          </button>
+          <h2 id="dislikes">0</h2>
+        </div>
+      </div>
+
+      <h2>Total: <span id="total">0</span></h2>
     </section>
 
     <script src="script.js"></script>
