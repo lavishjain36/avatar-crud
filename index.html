@@ -4,28 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Css-3D Transformation</title>
+    <title>Flex Layout</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h3>RotateX(180deg)</h3>
-    <button id="rotatex">rotatex</button>
-    <br />
-    <br />
-    <br />
+    <main class="layout-container">
+      <header class="flx-header">FLEX HEADER</header>
 
-    <h3>RotateY(180Deg)</h3>
-    <button id="rotatey">rotatey</button>
-    <br /><br /><br />
+      <main class="flx-main-container">
+        <nav class="flx-nav">Side Navigation</nav>
+        <article class="flx-article-section">Main Content Article</article>
 
-    <h3>RotateZ(180Deg)</h3>
-    <button id="rotatez">rotatez</button>
-    <br /><br /><br />
-
-    <h3>Rotate3D(180Deg, 0, 0, 1)</h3>
-    <button id="rotate3d">rotate3d</button>
-    <br /><br /><br />
-    <script src="script.js"></script>
+        <aside class="flx-aside">Side Ad Bar</aside>
+      </main>
+      <footer class="flx-footer">
+        FLEX Footer
+        <footer></footer>
+      </footer>
+    </main>
   </body>
 </html>

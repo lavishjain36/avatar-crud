@@ -1,34 +1,50 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  background-color: rgb(56, 159, 248);
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  text-align: center;
+  height: 100vh;
 }
 
-button {
-  background-color: rgb(243, 86, 86);
-  color: deepblue;
-  border: none;
-  padding: 12px 35px;
-  margin-left: 100px;
-  box-shadow: 0 0 8px black;
-  cursor: pointer;
-  font-size: 20px;
-  transition: all 0.5s;
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-#rotatex:hover {
-  transform: perspective(400px) rotateX(-45deg);
+.flx-header {
+  padding: 2rem;
+  background-color: #b3b0b0;
 }
 
-#rotatey:hover {
-  transform: perspective(400px) rotateY(-25deg);
+.flx-main-container {
+  display: flex;
+  flex: 1;
 }
 
-#rotatez:hover {
-  transform: perspective(600px) rotateZ(90deg);
+.flx-nav,
+.flx-aside {
+  background-color: #ce16ce;
+  padding: 2rem;
+  flex: 1;
 }
 
-#rotate3d:hover {
-  transform: perspective(400px) rotate3d(2, 1, 1, 40deg);
+.flx-article-section {
+  background-color: #19e4d0;
+  padding: 2rem;
+  flex: 4;
+}
+
+.flx-footer {
+  background-color: #56f30d;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+@media all and (max-width: 500px) {
+  .flx-main-container {
+    flex-direction: column-reverse;
+  }
 }
