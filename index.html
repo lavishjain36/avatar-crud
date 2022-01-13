@@ -4,19 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Layout</title>
+    <title>DOM Manipulation</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>To Do List</h1>
-      <br />
-      <input type="text" class="text" placeholder="Add Your Item" /> <br />
-      <br />
-      <button class="button">Add to List</button>
-      <ol class="list"></ol>
-    </div>
+    <section>
+      <h1 id="heading">Hello</h1>
+      <button onclick="myfun()">Submit</button>
+    </section>
+
+    <section>
+      <ol class="list-item">
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+      </ol>
+      <button class="btn">Submit</button>
+    </section>
+
+    <section>
+      <ul class="list-item">
+        <li class="item1">Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+      </ul>
+      <button class="btn">Submit</button>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
