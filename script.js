@@ -1,52 +1,48 @@
-function myfun() {
-  let x = document.getElementById("heading");
-  x.innerHTML = `<h1>Hello World</h1>`;
-  x.style.fontSize = "50px";
-  x.style.color = "red";
+function clear() {
+  document.getElementById("first").value = "";
+  document.getElementById("second").value = "";
+}
+function add() {
+  let num1 = document.getElementById("first").value;
+  let num2 = document.getElementById("second").value;
+  let result = parseInt(num1) + parseInt(num2);
+  console.log(result);
+
+  let res = document.getElementsByClassName("output")[0];
+  res.innerHTML = `Addtion is ${result}`;
+  //clear the fields in the form
+  clear();
 }
 
-// document
-//   .getElementsByClassName("btn")[0]
-//   .addEventListener("click", function () {
-//     // document.getElementsByClassName("list-item")[0].style.color = "red";
-//     // document.getElementsByClassName("list-item")[0].innerHTML = "Hello World";
-//     let listItem = document.getElementsByClassName("list-item");
-//     // console.log(listItem);
-//     let firstitem = listItem[0].innerHTML;
-//     // console.log(firstitem);
+function sub() {
+  let num1 = document.getElementById("first").value;
+  let num2 = document.getElementById("second").value;
+  let result = parseInt(num1) - parseInt(num2);
+  console.log(result);
 
-//     // let lengthitem = listItem.length;
-//     // console.log(lengthitem);
+  let res = document.getElementsByClassName("output")[0];
+  res.innerHTML = `Subtraction is ${result}`;
+  clear();
+}
 
-//     for (let i = 0; i < listItem.length; i++) {
-//       listItem[i].style.background = "red";
-//       listItem[i].style.color = "white";
-//       listItem[i].style.fontSize = "20px";
-//       listItem[i].style.padding = "10px";
-//     }
-//   });
+function mul() {
+  let num1 = document.getElementById("first").value;
+  let num2 = document.getElementById("second").value;
+  let result = parseInt(num1) * parseInt(num2);
+  console.log(result);
 
-//select the list element
-// let liElement = document.getElementsByTagName("li");
-// // console.log(liElement);
-// let totallength = liElement.length;
-// // console.log(totallength);
+  let res = document.getElementsByClassName("output")[0];
+  res.innerHTML = `Multiplication is ${result}`;
+  clear();
+}
 
-// let firstelement = liElement[0].innerHTML;
-// // console.log(firstelement);
-// //append the list item
+function div() {
+  let num1 = document.getElementById("first").value;
+  let num2 = document.getElementById("second").value;
+  let result = parseInt(num1) / parseInt(num2);
+  console.log(result);
 
-// for (let li in liElement) {
-//   liElement[li].style.background = "red";
-//   liElement[li].style.color = "white";
-//   liElement[li].style.fontSize = "20px";
-//   liElement[li].style.padding = "10px";
-// }
-
-// QuerySelectorall
-let ulLiElement = document.querySelectorAll("ul li");
-console.log(ulLiElement);
-
-let ulItem1 = document.querySelectorAll("ul li.item1");
-// console.log(ulItem1);
-ulItem1.innerHTML = "Apple";
+  let res = document.getElementsByClassName("output")[0];
+  res.innerHTML = `Division is ${result}`;
+  clear();
+}
