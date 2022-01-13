@@ -1,29 +1,14 @@
-1.create a para with id=>heading
-use id selector to change the content if user click on button
+To-do list app
+Input:
+1.Apple
+2.Mangoes
+3.Banana
+4.Grapes
 
-I am Heading=>Button
-Content changed
+10min.
+Add to List 
 
-
-
-2.Create id=>test
-if use click on button=>change the font-size of text 
-
-
-3.Create id=>toggle=> p or heading===>I m visible 
-button=>
-id selector 
-
-
-4.Create a table with id="value"
-create a Button
-
-FIrst row-1st cell   First-row-2nd cell
-Second row-1st cell  Second-row-2nd  cell
-new row-1st cell    new-row 2nd cell
-
-
-
-
-Add a New row button
+1.class selector:
+queryselector 
+2.Use concept addEventListner to add a new item to the list 
 
