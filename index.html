@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator DOM</title>
+    <title>ToDO LIST APP</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -16,25 +16,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="">First Value</label>
-          <input type="text" class="form-control" id="first" />
-        </div>
+      <h1>ToDO LIST</h1>
+      <br />
+      <input type="text" class="text" placeholder="Add Your ITEM" /> <br />
+      <br />
+      <button class="button">Add to List</button>
 
-        <div class="col-md-6 form-group">
-          <label for="">Second Value</label>
-          <input type="text" class="form-control" id="second" />
-      </div>
-
-      <button onclick="add()" class="btn btn-primary">Add</button> 
-      <button onclick="sub()" class="btn btn-secondary">Sub</button>
-      <button onclick="mul()" class="btn btn-success">Mult</button>
-      <button onclick="div()" class="btn btn-warning">Div</button>
-  
+      <ol class="list"></ol>
     </div>
-
-    <p class="output"></p>
     <script src="script.js"></script>
   </body>
 </html>

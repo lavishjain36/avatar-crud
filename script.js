@@ -1,48 +1,17 @@
-function clear() {
-  document.getElementById("first").value = "";
-  document.getElementById("second").value = "";
-}
-function add() {
-  let num1 = document.getElementById("first").value;
-  let num2 = document.getElementById("second").value;
-  let result = parseInt(num1) + parseInt(num2);
-  console.log(result);
+const button = document.querySelector(".button");
 
-  let res = document.getElementsByClassName("output")[0];
-  res.innerHTML = `Addtion is ${result}`;
-  //clear the fields in the form
-  clear();
-}
+button.addEventListener("click", function () {
+  //take the input the value
+  const text = document.getElementsByClassName("text")[0].value;
+  console.log(text);
+  //create a new li
+  const li = document.createElement("li");
+  //add the text to the li
+  // console.log(li);
+  li.innerText = text;
+  document.querySelector(".list").appendChild(li);
+  //clear the input
+  document.getElementsByClassName("text")[0].value = "";
+});
 
-function sub() {
-  let num1 = document.getElementById("first").value;
-  let num2 = document.getElementById("second").value;
-  let result = parseInt(num1) - parseInt(num2);
-  console.log(result);
-
-  let res = document.getElementsByClassName("output")[0];
-  res.innerHTML = `Subtraction is ${result}`;
-  clear();
-}
-
-function mul() {
-  let num1 = document.getElementById("first").value;
-  let num2 = document.getElementById("second").value;
-  let result = parseInt(num1) * parseInt(num2);
-  console.log(result);
-
-  let res = document.getElementsByClassName("output")[0];
-  res.innerHTML = `Multiplication is ${result}`;
-  clear();
-}
-
-function div() {
-  let num1 = document.getElementById("first").value;
-  let num2 = document.getElementById("second").value;
-  let result = parseInt(num1) / parseInt(num2);
-  console.log(result);
-
-  let res = document.getElementsByClassName("output")[0];
-  res.innerHTML = `Division is ${result}`;
-  clear();
-}
+// append=?string like input
