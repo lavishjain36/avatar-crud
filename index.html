@@ -10,12 +10,42 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>Using GetElementBy id</h1>
-    <p>This is paragraph-1</p>
-    <p>This is paragraph-2</p>
+    <!-- Change the HTML COntent using DOM -->
+    <section>
+      <header>
+        <h2 id="heading">I am heading-2</h2>
+        <button onclick="changeContent()">Click</button>
+      </header>
+    </section>
 
-    <p>Click the button to chage the paragraph color to blue</p>
+    <!-- Change the css -->
 
-    <button onclick="myfun()">Submit</button>
+    <section>
+      <h2 id="test">Changing font Size</h2>
+      <button onclick="getfont()">Change</button>
+    </section>
+
+    <!-- hide html elements -->
+    <section>
+      <h2 id="toggle">Hide this on click</h2>
+      <button onclick="toggleoff()">Hide</button>
+      <button onclick="toggleon()">Come back</button>
+    </section>
+    <input type="submit" onclick="insert_row()" value="Add new row" />
+    <!-- create a table  -->
+    <table id="sampletable" border="2" cellspacing="5" cellpadding="5">
+      <tr>
+        <td>First-Row-1st-cell</td>
+        <td>First-Row-2nd-cell</td>
+      </tr>
+
+      <tr>
+        <td>Second-Row-1st-cell</td>
+        <td>Second-Row-2nd-cell</td>
+      </tr>
+    </table>
+
+    <br />
+    <br />
   </body>
 </html>
