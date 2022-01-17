@@ -15,6 +15,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- //create 3 buttons -->
+    <section class="container-fluid mt-3">
+      <button class="btn btn-primary" id="all-emp-btn">All Employee</button>
+      <button class="btn btn-secondary" id="male-emp-btn">Male Employee</button>
+      <button class="btn btn-success" id="female-emp-btn">
+        Female Employee
+      </button>
+
+      <br /><br />
+      <!-- Input for search functionality -->
+      <form action="">
+        <label for="">Type Employee Name</label>
+        <input
+          type="search"
+          class="inputField"
+          id="search-box"
+          placeholder="Search Here"
+        />
+      </form>
+
+      <!-- create a layout for table to display in table format -->
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>IP Address</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
