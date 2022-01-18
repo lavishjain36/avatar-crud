@@ -12,3 +12,213 @@ Add to List
 queryselector 
 2.Use concept addEventListner to add a new item to the list 
 
+const promiseobj = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const data = ["Apple", "Mangoes", "Banana", "Grapes"];
+    if (data.length === 3) {
+      resolve(data);
+    } else {
+      reject("Something is not good");
+    }
+  }, 3000);
+});
+
+console.log(promiseobj);
+// promiseobj
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+
+
+function getPromiseBurger() {
+  return new Promise((resolve, reject) => {
+    let random = Math.floor(Math.random() * 10);
+    console.log(random);
+    if (random % 2 == 0) {
+      resolve("Your Promise Burger is ready");
+    } else {
+      reject("Your Promise Burger is not ready");
+    }
+  });
+}
+
+// console.log(getPromiseBurger());
+getPromiseBurger()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Finally");
+  });
+
+
+Promise Chaining:
+Promise chaining is  a way to handle multiple promises with then and catch block
+or you can return the result of one promise to another promise
+.then and catch 
+
+
+Promise Chaining:
+Promise chaining is  a way to handle multiple promises with then and catch block
+or you can return the result of one promise to another promise
+.then and catch 
+
+
+Apply for interview
+1.doProject
+2.attendTechnicalRound
+3.attendHRRound
+
+
+Have got job
+finally you have cleared or nto cleared the round
+
+//Promises with Dependent Promise
+let doProject = new Promise((resolve, reject) => {
+  //Doing the project promise
+  let isProjectDone = true;
+  if (isProjectDone) {
+    resolve("Project is done");
+  } else {
+    reject("Project is not done");
+  }
+});
+
+let attendTechnicalRound = new Promise((resolve, reject) => {
+  //Attend the technical Round
+  let isTechnicalRoundAttended = false;
+  if (isTechnicalRoundAttended) {
+    resolve("Technical Round is Cleared");
+  } else {
+    reject("Technical Round is not Cleared");
+  }
+});
+
+let attendHRRound = new Promise((resolve, reject) => {
+  //Attend the HR Round
+  let isHRRoundAttended = false;
+  if (isHRRoundAttended) {
+    resolve("HR Round is Cleared");
+  } else {
+    reject("HR Round is not Cleared");
+  }
+});
+
+// console.log(doProject);
+// doProject.then((msg) => {
+//   let theMsg = ` ${msg}`;
+//   attendTechnicalRound.then((msg) => {
+//     theMsg += `  ${msg}`;
+//     attendHRRound
+//       .then((msg) => {
+//         theMsg += `  ${msg}`;
+//         console.log(theMsg);
+//         console.log(" All Rounds are Cleared");
+//       })
+//       .catch((msg) => {
+//         console.log(msg);
+//       })
+//       .catch((msg) => {
+//         console.log(msg);
+//       })
+//       .catch((msg) => {
+//         console.log(msg);
+//       })
+//       .finally(() => {
+//         console.log("Finally.You have cleared or not cleard all the roun");
+//       });
+//   });
+// });
+
+let promiseall = Promise.all([doProject, attendTechnicalRound, attendHRRound]);
+// console.log(promiseall);
+promiseall
+  .then((msg) => {
+    console.log(msg);
+    console.log("All Rounds are Cleared");
+  })
+  .catch((msg) => {
+    console.log(msg);
+  })
+  .finally(() => {
+    console.log("Finally.You have cleared or not cleard all the roun");
+  });
+
+
+//Promises with Dependent Promise
+let doProject = new Promise((resolve, reject) => {
+  //Doing the project promise
+  let isProjectDone = true;
+  if (isProjectDone) {
+    resolve("Project is done");
+  } else {
+    reject("Project is not done");
+  }
+});
+
+let attendTechnicalRound = new Promise((resolve, reject) => {
+  //Attend the technical Round
+  let isTechnicalRoundAttended = false;
+  if (isTechnicalRoundAttended) {
+    resolve("Technical Round is Cleared");
+  } else {
+    reject("Technical Round is not Cleared");
+  }
+});
+
+let attendHRRound = new Promise((resolve, reject) => {
+  //Attend the HR Round
+  let isHRRoundAttended = false;
+  if (isHRRoundAttended) {
+    resolve("HR Round is Cleared");
+  } else {
+    reject("HR Round is not Cleared");
+  }
+});
+
+// console.log(doProject);
+doProject.then((msg) => {
+  let theMsg = ` ${msg}`;
+  attendTechnicalRound.then((msg) => {
+    theMsg += `  ${msg}`;
+    attendHRRound
+      .then((msg) => {
+        theMsg += `  ${msg}`;
+        console.log(theMsg);
+        console.log(" All Rounds are Cleared");
+      })
+      .catch((msg) => {
+        console.log(msg);
+      })
+      .catch((msg) => {
+        console.log(msg);
+      })
+      .catch((msg) => {
+        console.log(msg);
+      })
+      .finally(() => {
+        console.log("Finally.You have cleared or not cleard all the roun");
+      });
+  });
+});
+
+let promiseall = Promise.all([doProject, attendTechnicalRound, attendHRRound]);
+// console.log(promiseall);
+promiseall
+  .then((msg) => {
+    console.log(msg);
+    console.log("All Rounds are Cleared");
+  })
+  .catch((msg) => {
+    console.log(msg);
+  })
+  .finally(() => {
+    console.log("Finally.You have cleared or not cleard all the roun");
+  });
