@@ -29,6 +29,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <td><input type="text" id="fname" /></td>
+      </tr>
+
+      <br />
+      <tr>
+        <th>Last Name</th>
+        <td><input type="text" id="lname" /></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><input type="text" id="email" /></td>
+      </tr>
+      <br />
+      <tr>
+        <th>Age</th>
+        <td><input type="text" id="age" /></td>
+      </tr>
+      <br />
+      <tr id="btna">
+        <td>
+          <input type="submit" id="btn" value="Add" onclick="AddRow()" />
+        </td>
+      </tr>
+    </table>
+
+    <table border="2" id="show">
+      <thead>
+        <tr>
+          <th>FIrst Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+    </table>
     <script src="script.js"></script>
   </body>
 </html>
