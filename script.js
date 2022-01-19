@@ -1,32 +1,24 @@
-var list1 = [];
-var list2 = [];
-var list3 = [];
-var list4 = [];
-var n = 1;
-var x = 1;
-function AddRow() {
-  var addrown = document.getElementById("show");
-  var newrow = addrown.insertRow(n);
+//select the cat element
+const cat_btn = document.getElementById("cat_btn");
+const cat_result = document.getElementById("cat_result");
 
-  list1[x] = document.getElementById("fname").value;
-  list2[x] = document.getElementById("lname").value;
-  list3[x] = document.getElementById("email").value;
-  list4[x] = document.getElementById("age").value;
+//select the dog element
+const dog_btn = document.getElementById("dog_btn");
+const dog_result = document.getElementById("dog_result");
 
-  var cell1 = newrow.insertCell(0);
-  var cell2 = newrow.insertCell(1);
-  var cell3 = newrow.insertCell(2);
-  var cell4 = newrow.insertCell(3);
+cat_btn.addEventListener("click", function () {
+  fetch("https://aws.random.cat/meow")
+    .then((response) => response.json())
+    .then((data) => {
+      cat_result.innerHTML = `<img src="${data.file}" alt="cat" width="300" height="250">`;
+    });
+});
 
-  cell1.innerHTML = list1[x];
-  cell2.innerHTML = list2[x];
-  cell3.innerHTML = list3[x];
-  cell4.innerHTML = list4[x];
-
-  n++;
-  x++;
-  document.getElementById("fname").value = "";
-  document.getElementById("lname").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("age").value = "";
-}
+dog_btn.addEventListener("click", function () {
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      dog_result.innerHTML = `<img src="${data.message}" alt="dog" width="300" height="250">`;
+    });
+});

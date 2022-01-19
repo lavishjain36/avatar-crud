@@ -29,44 +29,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <table>
-      <tr>
-        <th>First Name</th>
-        <td><input type="text" id="fname" /></td>
-      </tr>
+    <div class="results">
+      <div id="cat_result">
+        <p>Random Cat</p>
+      </div>
 
-      <br />
-      <tr>
-        <th>Last Name</th>
-        <td><input type="text" id="lname" /></td>
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td><input type="text" id="email" /></td>
-      </tr>
-      <br />
-      <tr>
-        <th>Age</th>
-        <td><input type="text" id="age" /></td>
-      </tr>
-      <br />
-      <tr id="btna">
-        <td>
-          <input type="submit" id="btn" value="Add" onclick="AddRow()" />
-        </td>
-      </tr>
-    </table>
+      <div id="dog_result">
+        <p>Random Dog</p>
+      </div>
+    </div>
 
-    <table border="2" id="show">
-      <thead>
-        <tr>
-          <th>FIrst Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Age</th>
-        </tr>
-      </thead>
-    </table>
+    <div class="buttons">
+      <button id="cat_btn" class="btn btn-primary">Get the Cat</button>
+      <button id="dog_btn" class="btn btn-primary">Get the Dog</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
