@@ -1,35 +1,75 @@
-//Build an html elements Header part
-document.body.innerHTML = `<div class="heading-container">
-<h1>Brewerys List</h1>
-<img src="https://static.thenounproject.com/png/1976045-200.png" alt="brew" class="icon" width="50px" height="50px" />
-</div>
-<div id="mainContainer" class="main-container"></div>`;
-
-const getData = async () => {
-  try {
-    const data = await fetch("https://api.openbrewerydb.org/breweries");
-    const breweries = await data.json();
-    mainContainer.innerHTML = "";
-    breweries.forEach((brewery) => {
-      displayData(brewery);
-    });
-  } catch (error) {
-    console.log(error);
+// Promise Dependent with chaining
+let doproject = new Promise((resolve, reject) => {
+  //doing the project
+  let isprojectdone = true;
+  if (isprojectdone) {
+    resolve("Project is done");
+  } else {
+    reject("Project is not done");
   }
-};
+});
 
-getData();
-const displayData = (obj) => {
-  mainContainer.innerHTML += `
-  <div class="container">
-  <h3 class="blue">Breweries Name:<span>${obj.name}</span></h3>
-  <p class="para blue">Breweries Type:<span>${obj.brewery_type}</span></p>
-  <p class="para blue">Breweries Street:<span>${obj.street}</span></p>
-  <p class="para blue">Breweries City:<span>${obj.city}</span></p>
-  <p class="para blue">Breweries State:<span>${obj.state}</span></p>
-  <p class="para blue">Breweries Phone:<span>${obj.phone}</span></p>
-  <p class="para blue">Breweries Website:<span>${obj.website_url}</span></p>
-  <p class="para blue">Breweries Country:<span>${obj.country}</span></p>
-  </div>
-  `;
-};
+let attendTechnical = new Promise((resolve, reject) => {
+  //attending the technical
+  let isattending = true;
+  if (isattending) {
+    resolve("Technical round is cleared");
+  } else {
+    reject("Technical round is not cleared");
+  }
+});
+
+let attendHrRound = new Promise((resolve, reject) => {
+  //attending the HR round
+  let isattending = false;
+  if (isattending) {
+    resolve("HR round is cleared");
+  } else {
+    reject("HR round is not cleared");
+  }
+});
+
+// call the promise and chain the promises
+// doproject.then((msg) => {
+//   let themsg = `${msg}`;
+//   attendTechnical.then((msg) => {
+//     themsg += `${msg}`;
+//     attendHrRound
+//       .then((msg) => {
+//         themsg += `${msg}`;
+//         console.log(`${themsg}.FInally You have got the job`);
+//       })
+//       .catch((msg) => {
+//         console.log(`${msg}`);
+//       })
+//       .catch((msg) => {
+//         console.log(`${msg}`);
+//       })
+//       .catch((msg) => {
+//         console.log(`${msg}`);
+//       });
+//   });
+// });
+
+// Promise.all=>
+// it method takes an array of promises and return a promise
+// 1.resolved if all promises are fullfilled
+// 2.if one of promise gets rejected then all promise will get rejected
+
+// Syntax:
+// Promise.all([promise1,promise2,promise3])
+
+const promisecollection = Promise.all([
+  doproject,
+  attendTechnical,
+  attendHrRound,
+]);
+promisecollection
+  .then(function (result) {
+    console.log(result);
+    console.log("All promises are resolved");
+  })
+  .catch(function (err) {
+    console.log(err);
+    console.log("All promises are rejected");
+  });
