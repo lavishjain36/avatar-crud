@@ -1,75 +1,89 @@
-// Promise Dependent with chaining
-let doproject = new Promise((resolve, reject) => {
-  //doing the project
-  let isprojectdone = true;
-  if (isprojectdone) {
-    resolve("Project is done");
-  } else {
-    reject("Project is not done");
-  }
-});
+var url = "https://61ea3a267bc0550017bc65e7.mockapi.io/users";
 
-let attendTechnical = new Promise((resolve, reject) => {
-  //attending the technical
-  let isattending = true;
-  if (isattending) {
-    resolve("Technical round is cleared");
-  } else {
-    reject("Technical round is not cleared");
-  }
-});
-
-let attendHrRound = new Promise((resolve, reject) => {
-  //attending the HR round
-  let isattending = false;
-  if (isattending) {
-    resolve("HR round is cleared");
-  } else {
-    reject("HR round is not cleared");
-  }
-});
-
-// call the promise and chain the promises
-// doproject.then((msg) => {
-//   let themsg = `${msg}`;
-//   attendTechnical.then((msg) => {
-//     themsg += `${msg}`;
-//     attendHrRound
-//       .then((msg) => {
-//         themsg += `${msg}`;
-//         console.log(`${themsg}.FInally You have got the job`);
-//       })
-//       .catch((msg) => {
-//         console.log(`${msg}`);
-//       })
-//       .catch((msg) => {
-//         console.log(`${msg}`);
-//       })
-//       .catch((msg) => {
-//         console.log(`${msg}`);
-//       });
-//   });
-// });
-
-// Promise.all=>
-// it method takes an array of promises and return a promise
-// 1.resolved if all promises are fullfilled
-// 2.if one of promise gets rejected then all promise will get rejected
-
-// Syntax:
-// Promise.all([promise1,promise2,promise3])
-
-const promisecollection = Promise.all([
-  doproject,
-  attendTechnical,
-  attendHrRound,
-]);
-promisecollection
-  .then(function (result) {
-    console.log(result);
-    console.log("All promises are resolved");
+// HTTP Method=>GET (READ THE DATA)
+function getData() {
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
   })
-  .catch(function (err) {
-    console.log(err);
-    console.log("All promises are rejected");
-  });
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+// getData();
+
+//HTTP Method=>Send the data (CREATE)
+// POST=>
+function createData() {
+  let data = {
+    name: "kohn",
+    email: "kohn@gmail.com",
+  };
+
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+// createData();
+getData();
+
+// 3.Http Method:PUT
+// To update the data
+function updateData() {
+  let data = {
+    name: "Sindhu",
+    email: "sindhunana@gmail.com",
+  };
+  fetch(url + "/1", {
+    method: "PUT",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+updateData();
+
+// 4.Http Method:DELETE
+// To delete the data
+function deleteData() {
+  fetch(url + "/17", {
+    method: "DELETE",
+  })
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+deleteData();
