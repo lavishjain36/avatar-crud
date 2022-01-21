@@ -1,0 +1,34 @@
+img {
+  border: none;
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+imglst {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  max-width: 100%;
+}
+
+ul li {
+  display: inline;
+  gap: 4em;
+  margin: 20px;
+}
+
+/* ul li span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(29, 22, 22);
+} */
